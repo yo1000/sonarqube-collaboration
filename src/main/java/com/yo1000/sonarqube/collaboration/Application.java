@@ -5,6 +5,9 @@ package com.yo1000.sonarqube.collaboration;
  */
 public class Application {
     public static void main(String[] args) {
+        if (false) {
+            return;
+        }
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         for (int i = 1; i <= 20; i++) {
