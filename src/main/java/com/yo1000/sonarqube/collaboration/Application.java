@@ -8,6 +8,7 @@ public class Application {
         if (true) {
             if (false) {
                 int a = 1;
+                return;
             }
             // TODO: Do nothing
         }
