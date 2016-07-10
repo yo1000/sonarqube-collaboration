@@ -13,12 +13,6 @@ public class FizzBuzz {
     }
 
     public String fizzBuzz(int value) {
-        if (true) {
-            if (false) {
-                int a = 1;
-            }
-            // TODO: Do nothing
-        }
         StringBuilder builder = new StringBuilder(fizz(value)).append(buzz(value));
         return builder.length() > 0 ? builder.toString() : String.valueOf(value);
     }
