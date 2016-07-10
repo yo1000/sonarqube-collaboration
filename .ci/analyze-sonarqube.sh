@@ -2,15 +2,11 @@
 
 echo "${CI_PULL_REQUEST}"
 
-PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\/pull\///g'`
-echo "${PR_NUMBER}"
-
-if [ -z "${PR_NUMBER}" ]; then
+if [[ ! "${CI_PULL_REQUEST}" =~ /pull/[0-9]+$ ]]; then
   exit 0
 fi
 
 PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
-echo "${PR_NUMBER}"
 
 echo "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.0.1:sonar"
 echo "  -Dmaven.test.skip=true"
