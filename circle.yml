@@ -3,5 +3,5 @@ machine:
     version: openjdk8
 test:
   override:
-    - sh .ci/analyze-sonarqube.sh
+    - bash .ci/analyze-sonarqube.sh
     - mvn integration-test
