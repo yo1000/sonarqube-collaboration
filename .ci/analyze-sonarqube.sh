@@ -2,6 +2,9 @@
 
 PR_NUMBER=`echo "${CI_PULL_REQUEST}" | sed -e 's/.*\///g'`
 
+echo "${CI_PULL_REQUEST}"
+echo "${PR_NUMBER}"
+
 echo "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.0.1:sonar"
 echo "  -Dmaven.test.skip=true"
 echo "  -Dclirr=true"
